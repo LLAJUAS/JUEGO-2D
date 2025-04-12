@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Courgette|Lobster&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css"/>
+    <link rel="stylesheet" href="./style.css">
+    <title>The Legend of Zelda XD</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+  </head>
+  <audio class="hidden" controls id="musicInit">
+    <source src="/musica/FAIRYFOUNTAIN.mp3" type="audio/ogg">
+  </audio>
+  <audio class="hidden" controls id="audio">
+    <source src="/musica/KOKIRI.mp3" type="audio/ogg">
+  </audio>
+  <body onload="document.getElementById('musicInit').play()">
+    <div class="titleGame">
+      <img class="sizeTitleGame" src="./fotos/title.png"> 
+    </div>
+    <section>
+      <div id="gba">
+        <section> 
+          <div class="cross"></div>
+        </section>
+        <section class="buttonsStartSelect">
+          <div id="start">
+            <label> Iniciar </label>
+            <button class="buttonSelect"></button>
+          </div>
+          <div id="select">
+            <label> Pausar </label>
+            <button class="buttonStart"></button>
+          </div>
+          <div id="restart">
+            <label> Reiniciar </label>
+            <button class="buttonRest"></button>
+          </div>
+          <div id="musicid">
+            <label> Musica </label>
+            <button class="buttonmusic"></button>
+          </div>
+        </section>
+        <div class="hidden" id="marker">
+          <div class="hearts">
+            <img id="firstHeart" class="heart" src="./fotos/heart.gif">
+            <img id="secondHeart" class="heart" src="./fotos/heart.gif">
+            <img id="thirdHeart" class="heart" src="./fotos/heart.gif">
+          </div>
+          <div class="key hidden">
+            <img src="./fotos/key.gif">
+          </div>
+          <div class="rupees">
+            <label class="countRupees"> 0 </label>
+            <img class="rupee" src="./fotos/bluerupee.gif">
+          </div>
+        </div>
+        <canvas class="hidden" id="demo" width="832" height="515"></canvas>
+        <div id="splash">
+          <label class="startKey">  Presiona el boton de Inicio </label>
+        </div>
+        <div id="gameover" class="hidden">
+          <img src="../fotos/gameover.jpg" width="900" height="580">
+        </div>
+        <div id="finishgame" class="hidden">
+          <img src="../fotos/finish.jpg" width="900" height="580">
+        </div>
+        <div id="pause" class="hidden">
+            <div class="txtPause"> Pausa</div>
+            <div class="map"> 
+              <img src="../fotos/map.jpg" height="430" width="800">
+            </div>
+        </div>
+        <button class="buttonA"> A </button>  
+        <button class="buttonB"> B </button>
+      </div>
+    </section>
+    <script src="./js/img.js"> </script>
+    <script src="./js/keyboard.js"> </script>
+    <script src="./js/link.js"> </script>
+    <script src="./js/map.js"> </script>
+    <script src="./js/camera.js"> </script>
+    <script src="./js/game.js"> </script>
+    <script src="./js/main.js"></script>
+    <script src="./js/enemigos.js"></script>
+  </body>
+</html>
